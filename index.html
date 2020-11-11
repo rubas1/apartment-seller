@@ -34,7 +34,24 @@
     <hr>
 
     <div id="results"></div>
-
+    <script id="apartment-template" type="text/x-handlebars-template"> 
+        {{#each array}}  
+         <div class="result">
+               <img src={{img}} width="500" height="600">
+               <p>Address: {{address}}<br>
+                Price is: {{price}}<br>
+                Rooms number is: {{rooms}}<br>
+                {{#if parking}} 
+                Parking available<br>
+                {{/if}}
+                {{#if immediate}}
+                Contact Details: {{contactDetails.name}} - {{contactDetails.email}}
+                {{/if}}</p>
+        </div>
+        {{else}}
+             <div class="no-match">No match results</div>
+        {{/each}}
+    </script>
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
